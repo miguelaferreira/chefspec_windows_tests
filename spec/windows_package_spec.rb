@@ -1,5 +1,4 @@
-require 'chefspec'
-require 'chefspec/berkshelf'
+require_relative 'spec_helper'
 
 describe 'chefspec_windows_tests::windows_package' do
   let(:chef_run) { ChefSpec::SoloRunner.new(platform: 'windows', version: '2012R2').converge(described_recipe) }
